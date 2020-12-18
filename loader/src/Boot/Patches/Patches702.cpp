@@ -98,6 +98,11 @@ void Mira::Boot::Patches::install_prerunPatches_702()
 	kmem[3] = 0x90;
 	kmem[4] = 0x90;
 	kmem[5] = 0x90;
+	// Patch delayed panics
+	kmem = (uint8_t *)&gKernelBase[0x0063ACCE];
+	kmem[0] = 0x90;
+	kmem[1] = 0x90;
+
 
 #endif
 }
