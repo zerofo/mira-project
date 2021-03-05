@@ -1,6 +1,6 @@
 # Leave empty (erase TRUE) if disabling
 ifeq ($(OO_PS4_TOOLCHAIN),)
-$error("OO_PS4_TOOLCHAIN not set in path.")
+$(error OO_PS4_TOOLCHAIN not set in path.)
 else
 TOOLCHAIN 	:= $(OO_PS4_TOOLCHAIN)
 endif
